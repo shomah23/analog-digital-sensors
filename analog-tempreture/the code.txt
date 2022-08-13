@@ -1,0 +1,20 @@
+double voltage;
+double tempreture;
+
+void setup()
+{
+  Serial.begin(9600);
+  
+}
+
+void loop()
+{
+    voltage=analogRead(A0);
+  tempreture= map(voltage,20,358,-40,125);
+  
+  
+  Serial.print(tempreture);
+  Serial.print("\n");
+  
+  
+}
